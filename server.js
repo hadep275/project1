@@ -1,6 +1,7 @@
 import express from "express";
 import { chatRouter } from "./routes/chat.js";
-import bodyParser from "body-parser";
+//import {dialogRouter} from "./dialogFlow";
+//const dialogRouter = require("./dialogFlow");
 
 const API_URL = "http://localhost:2000/";
 
@@ -8,8 +9,6 @@ const app = express();
 const port = 2000;
 
 app.use(express.json());
-
-//app.use(bodyParser.json());
 
 app.use("/chat", chatRouter);
 
