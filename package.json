@@ -5,16 +5,13 @@
     "express": "^4.18.2"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "name": "fromfresh",
   "type": "module",
   "start": "nodemon server.js",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {
-    "nodemon": "^2.0.21"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hadep275/project1.git"
@@ -26,5 +23,8 @@
     "url": "https://github.com/hadep275/project1/issues"
   },
   "homepage": "https://github.com/hadep275/project1#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
