@@ -1,7 +1,5 @@
 import express from "express";
 import { chatRouter } from "./routes/chat.js";
-//import {dialogRouter} from "./dialogFlow";
-//const dialogRouter = require("./dialogFlow");
 
 const API_URL = "http://localhost:2000/";
 
