@@ -1,7 +1,14 @@
 import express from "express";
 import dialogFlow from "dialogFlow";
 export const chatRouter = express.Router();
-import { greetings, greetingsResponses, farewell, farewellResponses, unknown, unknownResponse} from "../data.js";
+import {
+  greetings,
+  greetingsResponses,
+  farewell,
+  farewellResponses,
+  unknown,
+  unknownResponse,
+} from "../data.js";
 chatRouter.get("/welcome", (req, res) => {
   res.send("Welcome Back to the land of the living");
 });
@@ -41,47 +48,41 @@ function getAnswer() {
 }
 chatRouter.post("/greetings", (req, res) => {
   const greet = req.body.greetings;
-console.log(greet);
-  if (greet =="Hello") {
+  console.log(greet);
+  if (greet == "Hello") {
     const randomIndex = Math.floor(Math.random() * greetingsResponses.length);
-  let answer = greetingsResponses[randomIndex];
-  res.send(`You asked: ${greet}, \n ${answer}`);
+    let answer = greetingsResponses[randomIndex];
+    res.send(`You asked: ${greet}, \n ${answer}`);
+  } else if (greet == "Hi") {
+    res.send(`Hello Hikmah!`);
   }
-  else if (greet =="Hi") {
-    
-  res.send(`Hello Hikmah!`);
-  }
-  
 });
 
 chatRouter.post("/farewell", (req, res) => {
-  const sendOff = req.body.farewell;
-console.log(sendOff);
-  if (sendOff =="goodbye") {
+  const sendOff = req.body;
+  console.log(sendOff);
+  if (sendOff.farewell == "goodbye") {
     const randomIndex = Math.floor(Math.random() * farewellResponses.length);
-  let answer = farewellResponses[randomIndex];
-  res.send(`You asked: ${sendOff}, \n ${answer}`);
+    let answer = farewellResponses[randomIndex];
+    res.send(`You asked: ${sendOff}, \n ${answer}`);
+  } else if (sendOff.farewell == "bye") {
+    if (sendOff.name) {
+      const farewellResponses = `Goodbye, ${sendOff.name}!`;
+      res.send(farewellResponses);
+    } else {
+      res.status(400).send("Error: Name parameter is missing.");
+    }
   }
-  else if (sendOff =="bye") {
-   let name =  
-  res.send(`bye ${name}}!`);
-  }
-  
 });
 
 chatRouter.post("/unknown", (req, res) => {
   const error = req.body.unknown;
-console.log(error);
-  if (error =="try again") {
+  console.log(error);
+  if (error == "try again") {
     const randomIndex = Math.floor(Math.random() * unknownResponse.length);
-  let answer = unknownResponse[randomIndex];
-  res.send(`${error}, \n ${answer}`);
+    let answer = unknownResponse[randomIndex];
+    res.send(`${error}, \n ${answer}`);
+  } else if (error == "failed") {
+    res.send(`I do not understand`);
   }
-  else if (error == "failed") {
-    
-  res.send(`I do not understand`);
-  }
-  
 });
-
- 
