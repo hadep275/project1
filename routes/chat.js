@@ -64,13 +64,14 @@ chatRouter.post("/greetings", (req, res) => {
 });
 
 chatRouter.post("/FAQs", (req, res) => {
-  const question = req.body;
+  const question = req.body.FAQs;
+  let questionIndex = FAQs.indexOf(question)
+  console.log(questionIndex)
+  let answer = FAQsResponses[questionIndex]
 console.log(question);
-  if (FAQs.includes(question.FAQs)) {
-    const randomIndex = Math.floor(Math.random() * FAQsResponses.length);
-  let answer = FAQsResponses[randomIndex];
-  res.send(`You asked: ${question.FAQs}, \n ${answer}`);
-}});
+  res.send(`${req.body.name}: ${req.body.FAQs} \n\nInceptionGPT: ${answer}`);
+});
+
 
 chatRouter.get("/FAQs", (req,res)=>{
   //res.send(`You asked: ${question.FAQs}, \n ${answer}`);

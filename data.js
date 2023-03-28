@@ -45,16 +45,16 @@ export const FAQs = [
   "\nWhat kind of support does InceptionU offer to its students?"
 ];
 export const FAQsResponses = [
-  "\nInceptionU is a tech-focused education provider that offers training and courses in the field of technology, design and entrepreneurship.",
-  "\nInceptionU offers a variety of courses in areas such as software development, data analytics, web development, UI/UX design, and entrepreneurship.",
-  "\nAnyone can enroll in courses at InceptionU, regardless of their background or level of experience. However, certain courses may have specific prerequisites.",
-  "\nThe duration of the courses at InceptionU varies depending on the course. Some courses can be completed in a few weeks, while others may take several months to complete.",
-  "\nThe cost of the courses at InceptionU varies depending on the course. Students can contact the institution for detailed information on the cost of individual courses.",
-  "\nInceptionU offers financing options to help students manage the cost of their education. Students can contact the institution to learn more about their financial assistance options.",
-  "\nTo complete a course at InceptionU, students must meet the requirements set out by the course instructor or program. This may include completing assignments, attending lectures, and achieving a minimum grade in the course.",
-  "\nInceptionU offers job placement assistance to its students. This may include resume writing assistance, interview coaching, and access to job listings.",
-  "\nYes, InceptionU offers online courses, which can be accessed by students from anywhere in the world.",
-  "\nInceptionU provides support to its students throughout their course of study. This may include access to mentors, networking opportunities, and career guidance."
+  "InceptionU is a tech-focused education provider that offers training and courses in the field of technology, design and entrepreneurship.",
+  "InceptionU offers a variety of courses in areas such as software development, data analytics, web development, UI/UX design, and entrepreneurship.",
+  "Anyone can enroll in courses at InceptionU, regardless of their background or level of experience. However, certain courses may have specific prerequisites.",
+  "The duration of the courses at InceptionU varies depending on the course. Some courses can be completed in a few weeks, while others may take several months to complete.",
+  "The cost of the courses at InceptionU varies depending on the course. Students can contact the institution for detailed information on the cost of individual courses.",
+  "InceptionU offers financing options to help students manage the cost of their education. Students can contact the institution to learn more about their financial assistance options.",
+  "To complete a course at InceptionU, students must meet the requirements set out by the course instructor or program. This may include completing assignments, attending lectures, and achieving a minimum grade in the course.",
+  "InceptionU offers job placement assistance to its students. This may include resume writing assistance, interview coaching, and access to job listings.",
+  "Yes, InceptionU offers online courses, which can be accessed by students from anywhere in the world.",
+  "InceptionU provides support to its students throughout their course of study. This may include access to mentors, networking opportunities, and career guidance."
 ];
 
 export const farewell = ["bye", "goodbye", "see you later"];
