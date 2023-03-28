@@ -1,7 +1,7 @@
 import express from "express";
 import dialogFlow from "dialogFlow";
 export const chatRouter = express.Router();
-import { greetings, greetingsResponses, farewell, farewellResponses, unknown} from "../data.js";
+import { greetings, greetingsResponses, farewell, farewellResponses, unknown, unknownResponse} from "../data.js";
 chatRouter.get("/welcome", (req, res) => {
   res.send("Welcome Back to the land of the living");
 });
@@ -63,12 +63,25 @@ console.log(sendOff);
   res.send(`You asked: ${sendOff}, \n ${answer}`);
   }
   else if (sendOff =="bye") {
-    
-  res.send(`bye Hikmah!`);
+   let name =  
+  res.send(`bye ${name}}!`);
   }
   
 });
 
-
+chatRouter.post("/unknown", (req, res) => {
+  const error = req.body.unknown;
+console.log(error);
+  if (error =="try again") {
+    const randomIndex = Math.floor(Math.random() * unknownResponse.length);
+  let answer = unknownResponse[randomIndex];
+  res.send(`${error}, \n ${answer}`);
+  }
+  else if (error == "failed") {
+    
+  res.send(`I do not understand`);
+  }
+  
+});
 
  
